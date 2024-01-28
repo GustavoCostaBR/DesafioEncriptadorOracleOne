@@ -62,20 +62,44 @@ function descriptografarTexto(texto) {
 	return textoTemp.join("");
 }
 
+function validacao(textoTemp) {
+	let valido = true;
+	for (let i=0; i < textoTemp.value.length; i++ ) {
+		if (textoTemp.value[i] < "a" || textoTemp.value[i] > "z") {
+			valido = false;
+		}
+	}
+	return valido;
+}
 
 
 function criptografar() {
 	let texto = document.getElementById("principal__container__entrada");
-	// console.log(texto.value)
-	let textoCriptografado = criptografarTexto(texto);
-	alterarId("principal__container__saida", textoCriptografado);
+
+	if (validacao(texto)){
+		let textoCriptografado = criptografarTexto(texto);
+		alterarId("principal__container__saida", textoCriptografado);
+	}
+	else {
+		alterarId("principal__container__saida", "Somente letras minúsculas e espaços serão aceitos, sem caracteres especiais ou acentuação gráfica!");
+	}
+
 }
 
 function descriptografar() {
 	let texto = document.getElementById("principal__container__entrada");
-	// console.log(texto.value)
-	let textoDescriptografado = descriptografarTexto(texto);
-	alterarId("principal__container__saida", textoDescriptografado);
+	if (validacao(texto)){
+		let textoDescriptografado = descriptografarTexto(texto);
+		alterarId("principal__container__saida", textoDescriptografado);
+	}
+	else {
+		alterarId("principal__container__saida", "Somente letras minúsculas e espaços serão aceitos, sem caracteres especiais ou acentuação gráfica!");
+	}
+
 }
 
-
+function copiar() {
+	let temp = document.getElementById("principal__container__saida");
+	// temp.select();
+	navigator.clipboard.writeText(temp.innerHTML);
+}

@@ -39,6 +39,11 @@ body {
     justify-content: space-between;
 }
 
+.principal__container__botoes__botao {
+    background-color: black;
+    padding: 10px 15px;
+}
+
 #principal__container__saida {
 
     background-color: white;
@@ -52,4 +57,9 @@ body {
 .principal__container__aviso {
     position: absolute;
     top: 650px;
+}
+
+.principal__rodape {
+    position: absolute;
+    top: 900px;
 }

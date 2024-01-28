@@ -16,15 +16,18 @@
         <textarea id="principal__container__entrada" type="text" placeholder="Digite o texto a ser criptografado aqui!"></textarea>
         <p class="principal__container__aviso">Apenas letras minúsculas e sem acento.</p>
         <div class="principal__container__botoes">
-            <button onclick="criptografar()" class="container__botao">Criptografar</button>
-            <button onclick="descriptografar()" class="container__botao">Descriptografar</button>
+            <button onclick="criptografar()" class="principal__container__botoes__botao">Criptografar</button>
+            <button onclick="descriptografar()" class="principal__container__botoes__botao">Descriptografar</button>
         </div>
 
 
     </section>
     <section class="principal__container">
         <p id="principal__container__saida">Seu texto criptografado aparecerá aqui!</p>
+        <button onclick="copiar()" class="principal__container__botoes__botao">Copiar</button>
     </section>
+
+    <p class="principal__rodape">Criado por: Gustavo Henrique da Costa (2024)</p>
 
 
     <script src="app.js" defer></script>
