@@ -8,28 +8,35 @@
     <title>Desafio Encriptador</title>
 </head>
 
-<body class="principal">
+<body>
 
 
+    <main class="principal">
+        <section class="principal__container__1">
+            <textarea id="principal__container__entrada" type="text"
+                placeholder="Digite o texto a ser criptografado aqui!"></textarea>
+            <p class="principal__container__aviso">Apenas letras minúsculas e sem acento.</p>
+            <div class="principal__container__botoes">
+                <button onclick="criptografar()" class="principal__container__botoes__botao">Criptografar</button>
+                <button onclick="descriptografar()" class="principal__container__botoes__botao">Descriptografar</button>
+            </div>
 
-    <section class="principal__container">
-        <textarea id="principal__container__entrada" type="text" placeholder="Digite o texto a ser criptografado aqui!"></textarea>
-        <p class="principal__container__aviso">Apenas letras minúsculas e sem acento.</p>
-        <div class="principal__container__botoes">
-            <button onclick="criptografar()" class="principal__container__botoes__botao">Criptografar</button>
-            <button onclick="descriptografar()" class="principal__container__botoes__botao">Descriptografar</button>
-        </div>
 
+        </section>
+        <section class="principal__container__2">
+            <div id="principal__container__saida">
+                <p id="saida__paragrafo">Seu texto criptografado aparecerá aqui!</p>
+                <img id="principal__container__imagem" src="imagem.svg" alt="Imagem do boneco com lupa.">
+            </div>
+            <button onclick="copiar()" id="principal__container__botao__copiar"
+                class="principal__container__botoes__botao">Copiar</button>
+        </section>
 
-    </section>
-    <section class="principal__container">
-        <p id="principal__container__saida">Seu texto criptografado aparecerá aqui!</p>
-        <img id="principal__container__imagem" src="imagem.svg" alt="Imagem do boneco com lupa.">
-        <button onclick="copiar()" id="principal__container__botao__copiar" class="principal__container__botoes__botao">Copiar</button>
-    </section>
+    </main>
 
-    <p class="principal__rodape">Criado por: Gustavo Henrique da Costa (2024)</p>
-
+    <footer>
+        <p class="principal__rodape">Criado por: Gustavo Henrique da Costa (2024)</p>
+    </footer>
 
     <script src="app.js" defer></script>
 </body>

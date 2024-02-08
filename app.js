@@ -77,8 +77,9 @@ function validacao(textoTemp) {
 
 
 function resetar() {
-	alterarId("principal__container__saida", "Seu texto criptografado aparecerá aqui quando você fornecer dados de entrada!");
-	imagem.style.visibility = "visible";
+	alterarId("saida__paragrafo", "Seu texto criptografado aparecerá aqui quando você fornecer dados de entrada!");
+	// imagem.style.visibility = "visible";
+	imagem.style.display = "block";
 }
 
 function criptografar() {
@@ -86,14 +87,16 @@ function criptografar() {
 	if (texto.value.length > 0) {
 		if (validacao(texto)){
 			let textoCriptografado = criptografarTexto(texto);
-			alterarId("principal__container__saida", textoCriptografado);
+			alterarId("saida__paragrafo", textoCriptografado);
 			// let imagem = document.getElementById("principal__container__imagem")
-			imagem.style.visibility = "hidden";
+			// imagem.style.visibility = "hidden";
+			imagem.style.display = "none";
 		}
 		else {
-			alterarId("principal__container__saida", "Somente letras minúsculas e espaços serão aceitos, sem caracteres especiais ou acentuação gráfica!");
+			alterarId("saida__paragrafo", "Somente letras minúsculas e espaços serão aceitos, sem caracteres especiais ou acentuação gráfica!");
 			// let imagem = document.getElementById("principal__container__imagem")
-			imagem.style.visibility = "visible";
+			// imagem.style.visibility = "visible";
+			imagem.style.display = "block";
 		}
 	}
 	else {
@@ -108,14 +111,16 @@ function descriptografar() {
 	if (texto.value.length > 0) {
 		if (validacao(texto)) {
 			let textoDescriptografado = descriptografarTexto(texto);
-			alterarId("principal__container__saida", textoDescriptografado);
+			alterarId("saida__paragrafo", textoDescriptografado);
 			// let imagem = document.getElementById("principal__container__imagem")
-			imagem.style.visibility = "hidden";
+			// imagem.style.visibility = "hidden";
+			imagem.style.display = "none";
 		}
 		else {
-			alterarId("principal__container__saida", "Somente letras minúsculas e espaços serão aceitos, sem caracteres especiais ou acentuação gráfica!");
+			alterarId("saida__paragrafo", "Somente letras minúsculas e espaços serão aceitos, sem caracteres especiais ou acentuação gráfica!");
 			// let imagem = document.getElementById("principal__container__imagem")
-			imagem.style.visibility = "visible";
+			// imagem.style.visibility = "visible";
+			imagem.style.display = "block";
 		}
 	}
 	else {
@@ -125,7 +130,7 @@ function descriptografar() {
 }
 
 function copiar() {
-	let temp = document.getElementById("principal__container__saida");
+	let temp = document.getElementById("saida__paragrafo");
 	// temp.select();
 	navigator.clipboard.writeText(temp.innerHTML);
 }
