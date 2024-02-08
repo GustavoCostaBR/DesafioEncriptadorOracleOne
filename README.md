@@ -1,2 +1,2 @@
 # DesafioEncriptadorOracleOne
-A simple encrypter/decrypter application
+A simple encryption/decryption application.
