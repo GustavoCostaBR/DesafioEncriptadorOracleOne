@@ -128,9 +128,17 @@ body {
     padding: 5px;
 }
 
-.principal__container__aviso {
-    text-align: center;
+.simbolo{
+    color: var(--cor-secundaria);
+    background-color: var(--cor-secundaria);
+    border-radius: 50%;
 }
+.principal__container__aviso {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
 footer {
     background-color: var(--cor-primaria);
     display: flex;
